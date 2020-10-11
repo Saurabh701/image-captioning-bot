@@ -85,7 +85,7 @@ def pred(photo):
   final_cap = ' '.join(final_cap)
   return final_cap
 
-enc = encode_img('/content/temp12.jpg')
+##enc = encode_img('/content/temp12.jpg')
 
 ## this image predicts the cation for image
 def pred_img(img):

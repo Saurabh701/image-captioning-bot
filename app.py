@@ -16,8 +16,8 @@ def cap():
 		path = './static/{}'.format(f.filename)
 		f.save(path)
 
-		##caption = sc.pred_img(path)
-		caption = 'test'
+		caption = sc.pred_img(path)
+		##caption = 'test'
 		
 		result_dic ={
 		'image' : path,
