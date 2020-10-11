@@ -19,12 +19,9 @@ def cap():
 		caption = sc.pred_img(path)
 		##caption = 'test'
 		
-		result_dic ={
-		'image' : path,
-		'caption' : caption
-		}
+		
 
-	return render_template("index.html", your_result = result_dic)
+	return render_template("index.html", img_path = result_dic ,  your_cap = caption )
 
 if __name__=='__main__':
 	app.run(debug = True)
