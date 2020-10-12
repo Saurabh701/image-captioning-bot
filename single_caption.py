@@ -28,19 +28,20 @@ from keras.layers.merge import add
 from keras.utils import generic_utils
 import segmentation_models as sm
 import matplotlib.pyplot as plt
-from google.colab import files
+#from google.colab import files
 import pickle
+#import app
 
 
 ## Read the encoding file 
-with open('idx_to_word.pkl','rb') as i2w:
+with open('./extra/idx_to_word.pkl','rb') as i2w:
   idx_to_word = pickle.load(i2w)
 
-with open('word_to_idx.pkl','rb') as w2i:
+with open('./extra/word_to_idx.pkl','rb') as w2i:
   word_to_idx = pickle.load(w2i)
 
 ## Load the model saved early
-model = load_model('/content/model_19.h5')
+model = tf.keras.models.load_model('./models/model_19.h5')
 model._make_predict_function()
 
 model_temp = ResNet50(weights='imagenet',input_shape=(224,224,3))

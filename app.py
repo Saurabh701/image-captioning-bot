@@ -21,7 +21,7 @@ def cap():
 		
 		
 
-	return render_template("index.html", img_path = result_dic ,  your_cap = caption )
+	return render_template("index.html",  your_result = result_dic )
 
 if __name__=='__main__':
-	app.run(debug = True)
+	app.run(threaded=False)

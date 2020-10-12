@@ -49,18 +49,20 @@ img{
 		<br>
 		<br>
 
-		{% if img_path and caption %}
+		{% if your_result %}
 
 			<div class="row">
 				<div class="col-sm-4">
-					<img src="{{image_path]}}">
+					<img src="{{your_result['image']}}">
 				</div>
 				<div class="col-sm-8">
 					<p class="text"> Generated Caption : </p>
-			 		<p> <b>{{ caption }} </b> </p>
+			 		<p> <b>{{ your_result['caption'] }} </b> </p>
 				</div>
 			</div>
 		{% endif %}
+		
+
 
 	</div>
 
